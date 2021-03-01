@@ -1,0 +1,16 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-01-05 17:04:57 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 17:05:05 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 17:05:38 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 17:05:57 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 17:06:19 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 17:06:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 179
+ERROR - 2021-01-05 17:06:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 233
+ERROR - 2021-01-05 19:42:14 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 277
+ERROR - 2021-01-05 19:42:19 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 19:43:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND s.status='Active'  AND ua.is_default='Yes'' at line 1 - Invalid query: SELECT ua.*,s.delivery_fee,s.delivery_from_time, s.delivery_to_time,s.delivery_time_units FROM cr_user_address ua INNER JOIN cr_service_provide_locations s ON ua.location_id = s.service_provide_location_id WHERE ua.user_id = AND s.status='Active'  AND ua.is_default='Yes' 
+ERROR - 2021-01-05 19:43:32 --> Severity: error --> Exception: Call to a member function result() on boolean /home/lacanycu/public_html/application/modules/welcome/controllers/Welcome.php 1099
+ERROR - 2021-01-05 22:36:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 22:36:35 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2021-01-05 22:37:21 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/lacanycu/public_html/application/modules/welcome/models/Welcome_model.php 88

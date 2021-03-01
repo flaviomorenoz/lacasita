@@ -1,0 +1,23 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2020-05-14 09:37:16 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:37:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:37:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:37:28 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:37:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:37:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:41:49 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:42:25 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:42:31 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:42:31 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:42:40 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:42:52 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:15 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 179
+ERROR - 2020-05-14 09:43:20 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:23 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:23 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:26 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:33 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 09:43:38 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 12:50:31 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
+ERROR - 2020-05-14 18:57:00 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable /home/qsysrnjx/public_html/memo/application/modules/welcome/models/Welcome_model.php 88
