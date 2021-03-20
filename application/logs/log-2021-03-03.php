@@ -1,0 +1,19 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-03-03 08:30:10 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 08:50:06 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 08:50:13 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 16:05:13 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 16:05:52 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 16:17:52 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 16:17:56 --> An invalid name was submitted as the product name: Enchilada Mixta + Vaso de Chicha The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2021-03-03 16:18:07 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 16:18:32 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 17:46:37 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:14:15 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:14:34 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:14:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:36:29 --> Severity: error --> Exception: syntax error, unexpected 'endforeach' (T_ENDFOREACH) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\cart\views\n_cart.php 88
+ERROR - 2021-03-03 21:40:04 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:42:27 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-03 21:42:34 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88

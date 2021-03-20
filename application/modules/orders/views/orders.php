@@ -24,6 +24,7 @@
 						<th><?php echo get_languageword('order_cost');?></th>
 						<th><?php echo get_languageword('customer_name');?></th>
 						<th><?php echo get_languageword('phone');?></th>
+						<th><?php echo get_languageword('locality');?></th>
 						<th><?php echo get_languageword('status');?></th>
 						<th><?php echo get_languageword('actions');?></th>
 					</tr>

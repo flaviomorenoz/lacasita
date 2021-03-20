@@ -65,6 +65,10 @@ class Base_Model extends CI_Model {
     function insert_operation( $inputdata, $table)
     {
 		$result  = $this->db->insert($this->db->dbprefix($table), $inputdata);
+		/*var_dump($table)
+		echo "<br><br>";
+		var_dump($inputdata);
+		die();*/
 		return ($this->db->affected_rows() != 1) ? FALSE : TRUE;
     }
 

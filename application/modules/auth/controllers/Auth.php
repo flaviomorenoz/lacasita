@@ -40,6 +40,7 @@ class Auth extends MY_Controller
     function index()
     {
         
+        
         if ($this->ion_auth->logged_in()) {
             
             if ($this->ion_auth->is_admin()) {

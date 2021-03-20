@@ -1,0 +1,18 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-03-19 13:57:03 --> Severity: error --> Exception: syntax error, unexpected 'var' (T_VAR) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\orders\controllers\Orders.php 40
+ERROR - 2021-03-19 13:57:22 --> Severity: error --> Exception: syntax error, unexpected 'var' (T_VAR) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\orders\controllers\Orders.php 40
+ERROR - 2021-03-19 13:58:16 --> Severity: error --> Exception: syntax error, unexpected 'var' (T_VAR) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\orders\controllers\Orders.php 40
+ERROR - 2021-03-19 10:42:12 --> Severity: Warning --> Use of undefined constant Todos - assumed 'Todos' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\controllers\Reports.php 159
+ERROR - 2021-03-19 10:42:12 --> Severity: Warning --> Use of undefined constant Todos - assumed 'Todos' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\views\date_wise_reports.php 78
+ERROR - 2021-03-19 10:42:12 --> Severity: Warning --> Use of undefined constant Nuevo - assumed 'Nuevo' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\views\date_wise_reports.php 79
+ERROR - 2021-03-19 12:25:02 --> Severity: Warning --> Use of undefined constant Todos - assumed 'Todos' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\controllers\Reports.php 412
+ERROR - 2021-03-19 12:25:02 --> Severity: Warning --> Use of undefined constant Todos - assumed 'Todos' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\views\item_wise_reports.php 134
+ERROR - 2021-03-19 12:25:02 --> Severity: Warning --> Use of undefined constant Nuevo - assumed 'Nuevo' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\reports\views\item_wise_reports.php 135
+ERROR - 2021-03-19 16:17:38 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 16:17:40 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 16:30:38 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 16:30:41 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 16:31:01 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 16:46:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-19 18:48:48 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\cart\views\n_cart.php 62

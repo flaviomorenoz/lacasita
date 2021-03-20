@@ -1,0 +1,795 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-style\tproperty"
+			],
+			[
+				"ip_",
+				"ip_address\t⌬ tabnine"
+			],
+			[
+				"desencri",
+				"desencriptar_d\t⌬ tabnine"
+			],
+			[
+				"get",
+				"getAttribute"
+			],
+			[
+				"set",
+				"setAttributeNS"
+			],
+			[
+				"rec",
+				"recto1"
+			],
+			[
+				"ge",
+				"getAttribute"
+			],
+			[
+				"select_co",
+				"select_contacto"
+			],
+			[
+				"on",
+				"onblur\tAttr"
+			],
+			[
+				"Nombre",
+				"NombreProyecto"
+			],
+			[
+				"view",
+				"view_proyecto"
+			],
+			[
+				"ar",
+				"arAsignado"
+			],
+			[
+				"margin-",
+				"margin-bottom\tproperty"
+			],
+			[
+				"car",
+				"cargaProyecto"
+			],
+			[
+				"no",
+				"norden"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"abrir",
+				"abrir_nuevo_cliente"
+			],
+			[
+				"sub",
+				"subCadena"
+			],
+			[
+				"configuracion",
+				"configuracion_tipo_de_cambio"
+			],
+			[
+				"NOM",
+				"nombre_comercial"
+			],
+			[
+				"realiza",
+				"realizaOtros"
+			],
+			[
+				"font",
+				"font-weight\tproperty"
+			],
+			[
+				"list",
+				"list-style-image\tproperty"
+			],
+			[
+				"border-",
+				"border-color\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"_",
+				"_REQUEST"
+			],
+			[
+				"direccion",
+				"direccion_empresa_"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"oncli",
+				"onclick\tAttr"
+			],
+			[
+				"nombre",
+				"nombre_cantidad"
+			],
+			[
+				"btn-",
+				"btn-primary"
+			],
+			[
+				"ite",
+				"item2"
+			],
+			[
+				"ad",
+				"address_company"
+			],
+			[
+				"modal",
+				"modal_buscar"
+			],
+			[
+				"bt",
+				"btn-ttc"
+			],
+			[
+				"backg",
+				"background-image\tproperty"
+			],
+			[
+				"backgro",
+				"background-repeat\tproperty"
+			],
+			[
+				"bac",
+				"background-image\tproperty"
+			],
+			[
+				"font-",
+				"font-weight\tproperty"
+			],
+			[
+				"text",
+				"textInput"
+			],
+			[
+				"fo",
+				"font-weight\tproperty"
+			],
+			[
+				"model",
+				"modelClientes"
+			],
+			[
+				"fac",
+				"factor_icbPer"
+			],
+			[
+				"nro",
+				"nro_tarjeta"
+			],
+			[
+				"alig",
+				"text-align\tproperty"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"onmouse",
+				"onmouseleave\tAttr"
+			],
+			[
+				"obj",
+				"objCatalogo"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"con",
+				"contador_carrito"
+			],
+			[
+				"nSub",
+				"nSubTotal"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"desc",
+				"descrip3"
+			],
+			[
+				"descr",
+				"descrip1"
+			],
+			[
+				"fecha_exp",
+				"fecha_exp_ano"
+			],
+			[
+				"fecha",
+				"fecha_exp_mes"
+			],
+			[
+				"boto",
+				"boton_cargo"
+			],
+			[
+				"div",
+				"div_col"
+			],
+			[
+				"spa",
+				"letter-spacing\tproperty"
+			],
+			[
+				"img",
+				"img_principal"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"background",
+				"background-position\tproperty"
+			],
+			[
+				"toke",
+				"txtToken"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install package control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/varios/qsystem/lacasita",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/admin",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/controllers",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/views",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/controllers",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/models",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/views",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders/controllers",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders/views",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/controllers",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/models",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/templates"
+	],
+	"file_history":
+	[
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/views/home/index.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/core/Model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/Base_model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/controllers/Welcome.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/kitchen_manager/controllers/Kitchen_manager.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/Ion_auth_model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/auth/controllers/Auth.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/libraries/Ion_auth.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/ion_auth.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/language/english/ion_auth_lang.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders/controllers/Orders.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/controllers/Cart.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/views/my_orders.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/core/CodeIgniter.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/views/n_cart2.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/views/n_cart.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders/views/orders.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/libraries/Email.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/core/Common.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/database/DB_result.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/database/DB_query_builder.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/orders/views/view_order.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/helpers/global_helper.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/models/My_orders_model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/my_orders/controllers/My_orders.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/Crunchy_model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/common/popup_script.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/libraries/Session/Session.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/cart/models/Cart_model.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/assets/admin/css/orange/custom.css",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/templates/admin-template.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/templates/home-template.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/templates/site-template.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/demo/system/libraries/Session/Session.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/common/home/header.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/core/MY_Controller.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/common/admin/navigation.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/assets/front/js/functions.js",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/assets/site/js/functions.js",
+		"/D/xampp/htdocs/mohombi/svg_correcta.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/libraries/Form_validation.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/third_party/MX/Loader.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/core/Config.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/autoload.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/third_party/MX/Config.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/config.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/libraries/Bcrypt.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/libraries/Encrypt.php",
+		"/C/Users/peru/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/peru/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/language/english/form_validation_lang.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/demo/system/libraries/Form_validation.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/demo/system/database/drivers/mysql/mysql_driver.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/database.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita2/application/config/database.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/auth/controllers/Auth_original.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/constants.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/Ion_auth_model_original.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/controllers/User_authentication.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/config/routes.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/views/common/home/footer.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/User.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/assets/admin/css/orange/bootstrap.css",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/system/libraries/Javascript/Jquery.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/views/sitemap.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/menu/controllers/Menu.php",
+		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/menu/views/menu.php",
+		"/D/xampp/htdocs/Lottus/assets/js/inventory.js",
+		"/D/xampp/htdocs/Lottus/application/views/inventories/index.php",
+		"/D/xampp/htdocs/Lottus/application/models/Inventory_Model.php",
+		"/D/xampp/htdocs/Lottus/application/controllers/Inventories.php",
+		"/D/xampp/htdocs/Lottus/application/config/database.php",
+		"/D/xampp/htdocs/Lottus/application/views/ficha_ingreso/detalle_comentario.php",
+		"/D/xampp/htdocs/Lottus/system/database/drivers/sqlite/sqlite_forge.php",
+		"/D/xampp/htdocs/Lottus/application/views/inventories/inventory.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/ACS_excel_retrasado.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/Operaciones/views/PreFactura/ACS_pdf.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/ACS_pdf.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/ACS_excel.php",
+		"/D/xampp/htdocs/QSD/app/js/app.js",
+		"/D/xampp/htdocs/QSD/app/Operaciones/modelos/Prefactura/MActaCServicio.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/ajax/PreFactura/CActaCServicio.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/ActaConformidadServicio.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/Operaciones/views/PreFactura/ActaConformidadServicio.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/cargaProyecto.php",
+		"/D/xampp/htdocs/QSD/app/Operaciones/views/PreFactura/cargaColaborador.php",
+		"/D/xampp/htdocs/QSD/app/js/app_adicional.js",
+		"/D/xampp/htdocs/QSD/app/layaout/navegacionSistema.php",
+		"/D/xampp/htdocs/QSD/app/config/recurso.php",
+		"/D/xampp/htdocs/QS/app/config/recurso.php",
+		"/D/xampp/htdocs/QS/app/config/global.php",
+		"/D/xampp/htdocs/QS/app/config/config.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/ACS_excel_unificado.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/cargaProyecto.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/ajax/PreFactura/CActaCServicio.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/prueba.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/ACS_pdf.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/ActaConformidadServicio.php",
+		"/D/xampp/htdocs/QS/app/Operaciones/views/PreFactura/index.php",
+		"/D/xampp/htdocs/index.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/config/recurso.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/Operaciones/views/layaout/Header.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/Operaciones/views/Menu/Menu.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/layaout/navegacionSistema.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/Operaciones/views/layaout/Footer.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/config/global.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/config/config.php",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/vendor/bootstrap/dist/css/bootstrap.css",
+		"/D/xampp/htdocs/varios/qsystem/QS/app/css/bootstrap.css",
+		"/D/xampp/htdocs/varios/basic/vendor/bower-asset/bootstrap/dist/css/bootstrap.css",
+		"/D/Varios/Sistemas Grales/Qsystem/Qsystem files/qsysthoo_systemq.sql",
+		"/D/xampp/htdocs/varios/index.php",
+		"/D/xampp/htdocs/varios/excel/PHPExcel-1.8/Examples/03formulas.php",
+		"/D/xampp/htdocs/varios/excel/PHPExcel-1.8/Examples/50flavio.php",
+		"/D/xampp/htdocs/varios/excel/index.php",
+		"/C/Users/peru/Downloads/calculo.xlsx",
+		"/D/xampp/htdocs/plataforma/view/v_pagos_avon.php",
+		"/D/xampp/htdocs/plataforma/view/v_subir_archivos.php",
+		"/D/xampp/htdocs/dfl/main.php",
+		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/frontendxxx.php",
+		"/D/xampp/htdocs/codeigniter3/application/views/matematicas.php",
+		"/D/xampp/htdocs/mohombi/montanas.php",
+		"/D/xampp/htdocs/jfksys/index.php",
+		"/D/xampp/htdocs/codeigniter3/application/views/holaMundo/matematicas.php",
+		"/D/xampp/htdocs/codeigniter3/application/config/autoload.php",
+		"/D/xampp/htdocs/codeigniter3/application/controllers/holaMundo.php",
+		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/frontend.php",
+		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/default.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\assets,D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\application",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\assets,D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\system",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\application",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\assets",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\application",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\system",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\application\\libraries",
+			"D:\\xampp\\htdocs\\varios\\qsystem\\lacasita\\application",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cr_stores",
+			"order_status",
+			"$order_status",
+			"view_order",
+			"var_dump",
+			"die",
+			"die(",
+			"email",
+			"correo",
+			"mail",
+			"no enviado al usuario",
+			"correo electrónico",
+			"Estado del pedido",
+			"Estado del pedido actualizado",
+			"Correo electrónico no enviado al usuario",
+			"die",
+			"out_to_deliver",
+			"die",
+			"save_order",
+			"success",
+			"cs-card-content card-items-list",
+			"URL_MENU",
+			"cs-card-content card-items-list",
+			"_render_page",
+			"template",
+			"Mis Pedidos",
+			"Detalles de la entrega",
+			"TBL_USER_POINTS",
+			"ver que",
+			"no_of_redeemed_points",
+			"save_order",
+			"$order_id",
+			"zamarro",
+			"check",
+			"extrema",
+			"save_order",
+			"var targeturl = add_cart_target_url;",
+			"function update_cart",
+			"$result",
+			"cart-form",
+			"get_user_address",
+			"TBL_USER_ADDRESS",
+			"siga los horarios del restaurante",
+			"content",
+			"orders",
+			"cart",
+			"El pedido no se puede reservar, siga los horarios del restaurante",
+			"$identity_column",
+			"$tables",
+			"$hash_method",
+			"hash_method",
+			"public $hash_method",
+			"function hash_method",
+			"hash_method",
+			"has",
+			"hash_method"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 142.0
+	},
+	"output.xdebug":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "lacasita.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"restore_index":
+			{
+				"13":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"14":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"15":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"19":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"20":
+				{
+					"group": 0,
+					"index": 7
+				},
+				"21":
+				{
+					"group": 0,
+					"index": 12
+				},
+				"22":
+				{
+					"group": 0,
+					"index": 13
+				},
+				"23":
+				{
+					"group": 0,
+					"index": 14
+				},
+				"26":
+				{
+					"group": 2,
+					"index": 1
+				},
+				"27":
+				{
+					"group": 1,
+					"index": 0
+				},
+				"28":
+				{
+					"group": 2,
+					"index": 0
+				},
+				"29":
+				{
+					"group": 1,
+					"index": 1
+				},
+				"31":
+				{
+					"group": 0,
+					"index": 8
+				},
+				"32":
+				{
+					"group": 0,
+					"index": 10
+				},
+				"33":
+				{
+					"group": 0,
+					"index": 11
+				},
+				"34":
+				{
+					"group": 0,
+					"index": 9
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						2,
+						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.5,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.767873303167,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

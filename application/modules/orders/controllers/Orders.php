@@ -9,6 +9,7 @@ class Orders extends MY_Controller
     {
         parent::__construct();
         check_access('admin');
+
     }
 
     /**
@@ -22,29 +23,36 @@ class Orders extends MY_Controller
     function index($order_type='')
     {
         if ($order_type=='') {
-            $order_type='new';
+            $order_type = 'new';
         }
         
-        
-        $active_submenu=$order_type;
-        
-        
+        $active_submenu = $order_type;
+        //echo("URL_ORDERS_AJAX_GET_LIST:".URL_ORDERS_AJAX_GET_LIST);
+        //echo("Type:".$order_type);
         
         $this->data['ajaxrequest'] = array(
-        'url' => URL_ORDERS_AJAX_GET_LIST,
-        'disablesorting' => '0,8',
-        'type' => $order_type
+            'url' => URL_ORDERS_AJAX_GET_LIST,
+            'disablesorting' => '0,8',
+            'type' => $order_type
         );
         
-        $this->data['css_js_files'] = array('data_tables');
-        $this->data['activemenu']     = "orders";
-        $this->data['actv_submenu'] = $active_submenu;
-        $this->data['message']         = $this->session->flashdata('message');
-        $this->data['pagetitle']     = get_languageword('view_orders');
-        $this->data['content']         = PAGE_ORDERS;
+        $this->data['css_js_files']     = array('data_tables');
+        $xnx = array('data_tables');
+        //var_dump($xnx);
+        //die("Finalo");
+
+        $this->data['activemenu']       = "orders";
+        $this->data['actv_submenu']     = $active_submenu; // new
+        $this->data['message']          = $this->session->flashdata('message'); // vacio
+        $this->data['pagetitle']        = get_languageword('view_orders');  // Ver pedidos
+        $this->data['content']          = PAGE_ORDERS; // orders
+        //die(PAGE_ORDERS);  // orders
+        //die("TEMPLATE_ADMIN:".TEMPLATE_ADMIN);
+        //var_dump($active_submenu);
+        //die();
         $this->_render_page(TEMPLATE_ADMIN, $this->data);
     }
-    
+
     /**
      * Fetch Orders Records
      *
@@ -60,11 +68,10 @@ class Orders extends MY_Controller
             
             $conditions = array();
 
-            $columns = array('tds.order_id','tds.order_date','tds.order_time','tds.total_cost','tds.customer_name','tds.phone','tds.status');    
+            $columns = array('tds.order_id','tds.order_date','tds.order_time','tds.total_cost','tds.customer_name','tds.phone','tds.locality','tds.status');    
             
             $query     = "SELECT tds.* from ".TBL_PREFIX.TBL_ORDERS." tds WHERE tds.status = '".$order_type."' ";
-            
-            
+
             $records = $this->base_model->get_datatables($query, 'customnew', $conditions, $columns, array('order_id'=>'desc'));
             
             $currency_symbol = $this->config->item('site_settings')->currency_symbol;
@@ -78,11 +85,12 @@ class Orders extends MY_Controller
                     $row[] = $no;
                     $row[] = '<span>'.$record->order_id.'</span>';
                     $row[] = '<span>'.get_date($record->order_date).'</span>';
+                    
                     $row[] = '<span>'.$record->order_time.'</span>';
                     $row[] = '<span>'.$currency_symbol.$record->total_cost.'</span>';
                     $row[] = '<span>'.$record->customer_name.'</span>';
                     $row[] = '<span>'.$record->phone.'</span>';
-                    
+                    $row[] = '<span>'.$record->locality.'</span>';
                     
                     $order_status = '';
                     $class = 'badge danger';
@@ -128,11 +136,12 @@ class Orders extends MY_Controller
             "data" => $data,
             );
 
+            //var_dump($_POST['draw']);
+            //die("Kero");
             echo json_encode($output);
         }
     }
-    
-    
+
     /**
      * VIEW ORDER
      *
@@ -183,7 +192,6 @@ class Orders extends MY_Controller
             redirect(URL_ORDERS_INDEX.'new');
         }
         
-        
         $this->data['order']            = $order;
         $this->data['order_products']    = $order_products;
         $this->data['order_addons']        = $order_addons;
@@ -212,11 +220,8 @@ class Orders extends MY_Controller
                 } 
             }
             $this->data['delivery_managers'] = $dm_options; 
-
             
         }
-        
-        
         
         $this->data['css_js_files'] = array('form_validation');
         $this->data['activemenu']     = "orders";
@@ -591,7 +596,10 @@ class Orders extends MY_Controller
             $order_id = $this->input->post('order_id');
             $order = $this->base_model->fetch_records_from(TBL_ORDERS, array('order_id'=>$order_id));
             
+            //die("veremos si al grabar, entramos aqui");
             if (!empty($order)) {
+                
+
                 $order = $order[0];
                 $user=getUserRec($order->user_id);
                 $redirect_path = URL_ORDERS_INDEX.$order->status;
@@ -764,28 +772,30 @@ class Orders extends MY_Controller
                     //SEND EMAIL TO USER
                     //SEND EMAIL TO USER
                     $email_template = $this->base_model->fetch_records_from(TBL_EMAIL_TEMPLATES, array('subject'=>'order_status_changed','status'=>'Active'));
+                    //echo TBL_EMAIL_TEMPLATES . "<br>";
+                    //var_dump($email_template);
+                    //die("sociego");
                     
                     if (!empty($email_template)) {
                         $email_template = $email_template[0];
                         
-                        $from     = $this->config->item('site_settings')->portal_email;
-                        $to     = $user->email;
-                        $sub     = $this->config->item('site_settings')->site_title.' - '.get_languageword('order_status');
+                        $from       = $this->config->item('site_settings')->portal_email;
+                        $to         = $user->email;
+                        $sub        = $this->config->item('site_settings')->site_title.' - '.get_languageword('order_status');
                     
-                        $content         = $email_template->email_template;
+                        $content    = $email_template->email_template;
                         
+                        $content     = str_replace("__SITE_TITLE__", $this->config->item('site_settings')->site_title, $content);
                         
-                        $content         = str_replace("__SITE_TITLE__", $this->config->item('site_settings')->site_title, $content);
+                        $content     = str_replace("__NAME__", $order->customer_name, $content);
                         
-                        $content         = str_replace("__NAME__", $order->customer_name, $content);
-                        
-                        $content         = str_replace("__ORDER__NO__", $order->order_id, $content);
+                        $content     = str_replace("__ORDER__NO__", $order->order_id, $content);
                         
                         $content     = str_replace("__NO_OF_ITEMS__", $order->no_of_items, $content);
 
-                        $content         = str_replace("__ORDER_TIME__", $order->order_time, $content);
+                        $content     = str_replace("__ORDER_TIME__", $order->order_time, $content);
                     
-                        $content         = str_replace("__TOTAL_COST__", $this->config->item('site_settings')->currency_symbol.$order->total_cost, $content);
+                        $content     = str_replace("__TOTAL_COST__", $this->config->item('site_settings')->currency_symbol.$order->total_cost, $content);
                         
                         $cash1 = '';
                         if ($order->payment_type == 'cashCard') {
@@ -793,10 +803,9 @@ class Orders extends MY_Controller
                         }else{
                             $cash = 'Pago Online';
                         }
-                        $content         = str_replace("__PAYMENT_MODE__", $cash, $content);
+                        $content   = str_replace("__PAYMENT_MODE__", $cash, $content);
                         
                         $content   = str_replace("__MESSAGE__", $this->input->post('message'), $content);
-
 
                         if ($order->status == 'new') {
                             $order_status = 'Nuevo';   
@@ -816,14 +825,20 @@ class Orders extends MY_Controller
                         
                         $content         = str_replace("__CONTACT__NO__", $this->config->item('site_settings')->land_line, $content);
                         
-                        
                         $content         = str_replace("__SITE_TITLE__", $this->config->item('site_settings')->site_title, $content);
                     
-                    
+                        //echo "from: $from <br>";
+                        //echo "to: $to <br>";
+                        //echo "sub: $sub <br>";
+                        //die("content: $content <br>");
+
                         if (sendEmail($from, $to, $sub, $content)) {
                             $msg .= ' '.get_languageword('email_sent_to_user');
                         } else {
                             $msg .= ' '.get_languageword('email_not_send_to_user');
+                            $msg .= "&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=\"https://api.whatsapp.com/send?phone=51" . $user->phone . "\" target=\"_blank\" style=\"color:white\">Envie Whatsapp</a></b>";
+                            //var_dump($user);
+                            //die("finish");
                         }                            
                     }
                     //SEND EMAIL TO USER
@@ -906,4 +921,5 @@ class Orders extends MY_Controller
             redirect(URL_ORDERS_INDEX.'new');
         }
     }
+    
 }

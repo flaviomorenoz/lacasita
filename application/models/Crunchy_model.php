@@ -378,6 +378,7 @@ class Crunchy_model extends CI_Model
 	{
 		$query = "SELECT * FROM ".TBL_PREFIX.TBL_ORDERS." WHERE user_id=".$user_id." ORDER BY order_id DESC";
 		
+		
 		$this->db->query($query)->result();
 		$this->numrows = $this->db->affected_rows();
 		

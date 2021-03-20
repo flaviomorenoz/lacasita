@@ -1,0 +1,8 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-03-17 00:33:08 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-17 00:33:57 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-17 00:34:09 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND s.status='Active'  AND ua.is_default='Yes'' at line 1 - Invalid query: SELECT ua.*,s.delivery_fee,s.delivery_from_time, s.delivery_to_time,s.delivery_time_units FROM cr_user_address ua INNER JOIN cr_service_provide_locations s ON ua.location_id = s.service_provide_location_id WHERE ua.user_id = AND s.status='Active'  AND ua.is_default='Yes' 
+ERROR - 2021-03-17 00:34:16 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
+ERROR - 2021-03-17 23:50:00 --> Severity: error --> Exception: syntax error, unexpected '_blank' (T_STRING) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\orders\controllers\Orders.php 833
+ERROR - 2021-03-17 23:50:17 --> Severity: error --> Exception: syntax error, unexpected '_blank' (T_STRING) D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\orders\controllers\Orders.php 833

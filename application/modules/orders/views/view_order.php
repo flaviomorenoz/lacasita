@@ -107,7 +107,7 @@
 				          			$order_status = 'Nuevo';
 				          		}elseif ($order->status == "out_to_deliver") {
 				          			$order_status = 'En Camino';
-				          		} 
+				          		}
 				          		echo $order_status;
 							?></li>
 						
@@ -118,9 +118,6 @@
                            
 						
                       </div>
-					  
-					  
-							
 							
 						<div class="col-md-6">
 						

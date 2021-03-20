@@ -964,49 +964,50 @@ function load_cart_summary_div() {
 function check_address(ua_id) {
 	
 	if (ua_id>0) {
-	
 
-	$("#cart-div").html('<img class="abs-loader" src="<?php echo LOADER_IMG;?>" alt="Loader" align="middle">');
-	
-	
-	var checked='no';
-	
-	var discount = 0;
-	
-	discount = $("form#cart-form input[name='user_redeem_points']:checked").val();
-	
-	if (discount>0)
-		checked='yes';
-	
-	$("body").addClass("ajax-load");
-	
-	$.ajax({
-		url:'<?php echo base_url();?>welcome/load_cart_summary_div',
-		type:'POST',
-		data: '<?php echo $this->security->get_csrf_token_name();?>=<?php echo $this->security->get_csrf_hash();?>&ua_id='+ua_id+'&discount='+discount+'&checked='+checked,
-		success :function(response){
+		$("#cart-div").html('<img class="abs-loader" src="<?php echo LOADER_IMG;?>" alt="Loader" align="middle">');
+		
+		var checked='no';
+		
+		var discount = 0;
+		
+		discount = $("form#cart-form input[name='user_redeem_points']:checked").val();
+		
+		if (discount>0)
+			checked='yes';
+		
+		$("body").addClass("ajax-load");
+		
+		console.log('<?php echo base_url(); ?>' + 'welcome/load_cart_summary_div')
 
-			$("body").removeClass("ajax-load");
+		$.ajax({
 			
-			if (response!='') {
-				$("#cart-div").html(response);
-			} else {
-				$("#cart-div").empty();
+			url:'<?php echo base_url();?>welcome/load_cart_summary_div',
+			
+			type:'POST',
+			
+			data: '<?php echo $this->security->get_csrf_token_name();?>=<?php echo $this->security->get_csrf_hash();?>&ua_id='+ua_id+'&discount='+discount+'&checked='+checked,
+			
+			success :function(response){
+
+				$("body").removeClass("ajax-load");
+				
+				if (response!='') {
+					$("#cart-div").html(response);
+				} else {
+					$("#cart-div").empty();
+				}
 			}
-		}
-	});
+		});
 	
 	}
 }
 
 function check_points() {
 	
-	
 	$("#cart-div").html('<img class="abs-loader" src="<?php echo LOADER_IMG;?>" alt="Loader" align="middle">');
 	
-
 	var ua_id = $("form#cart-form input[name='zipcode']:checked").val();
-	
 	
 	var checked='no';
 	
@@ -1021,8 +1022,11 @@ function check_points() {
 
 	$.ajax({
 		url:'<?php echo base_url();?>welcome/load_cart_summary_div',
+
 		type:'POST',
+
 		data: '<?php echo $this->security->get_csrf_token_name();?>=<?php echo $this->security->get_csrf_hash();?>&discount='+discount+'&checked='+checked+'&ua_id='+ua_id,
+
 		success :function(response){
 			
 			$("body").removeClass("ajax-load");

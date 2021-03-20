@@ -779,11 +779,21 @@ class Cart_model extends CI_Model
             redirect(URL_AUTH_LOGIN);
         }
         
-
         $query = "SELECT ua.*,s.city_id,s.delivery_fee,s.delivery_from_time, s.delivery_to_time,s.delivery_time_units FROM ".TBL_PREFIX.TBL_USER_ADDRESS." ua INNER JOIN ".TBL_PREFIX.TBL_SERVICE_PROVIDE_LOCATIONS." s ON ua.location_id = s.service_provide_location_id WHERE ua.user_id =".$user_id."  AND ua.ua_id=".$ua_id." AND s.status='Active' ";
 
         $user_address = $this->db->query($query)->result();
 
+        if(empty($user_address)){
+            
+            $query = "SELECT ua.*,s.city_id,s.delivery_fee,s.delivery_from_time, s.delivery_to_time,s.delivery_time_units".
+            ",' ' landmark".
+            " FROM ".TBL_PREFIX."stores ua". 
+            " INNER JOIN ".TBL_PREFIX.TBL_SERVICE_PROVIDE_LOCATIONS." s ON ua.location_id = s.service_provide_location_id".
+            " WHERE ua.id=" . $ua_id . " AND s.status='Active' ";
+
+            $user_address = $this->db->query($query)->result();
+        }else{
+        }
         return $user_address;
     }
     

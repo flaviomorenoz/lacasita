@@ -10,6 +10,7 @@ class My_orders extends MY_Controller{
         $this->load->model('my_orders_model');
         
         check_access('user');
+
     }
     
     function index() {
@@ -37,6 +38,8 @@ class My_orders extends MY_Controller{
         $this->data['pagetitle']     = get_languageword('my_orders');
         
         $this->data['data']            = $orders;
+        //var_dump($orders);
+        
         $this->data['content']         = 'my_orders'; 
     
         $this->set_pagination('my_orders/index', $this->data['offset'], $numrows, PER_PAGE, 'fetch_more');
@@ -45,6 +48,7 @@ class My_orders extends MY_Controller{
         if ($ajax == 1) {
             $this->load->view($this->data['content'], $this->data);
         } else {
+            //die(getTemplate()); 
             $this->_render_page(getTemplate(), $this->data);
         }
     }
@@ -52,6 +56,7 @@ class My_orders extends MY_Controller{
     
     function get_order_details() {
        
+        
         if ($this->ion_auth->logged_in()) {
            
             $page='';
@@ -61,6 +66,7 @@ class My_orders extends MY_Controller{
             $order = $this->base_model->fetch_records_from(TBL_ORDERS, array('order_id'=>$order_id));
            
             if (!empty($order)) {
+
                 $order = $order[0];
                
                 //order products
@@ -72,9 +78,7 @@ class My_orders extends MY_Controller{
                 //order offers
                 $order_offers = $this->base_model->fetch_records_from(TBL_ORDER_OFFERS, array('order_id'=>$order->order_id));
                 
-                
                 if (!empty($order_products)) {
-                
                     $page .= '<p>'.get_languageword('order_products').'</p>';
                 
                     $p=0;
@@ -105,7 +109,7 @@ class My_orders extends MY_Controller{
 						  <td>'.$product->item_cost.'</td>
 						  <td>'.$product->item_qty.'</td>
 						  <td>'.$product->final_cost.'</td>
-				</tr>'; 
+				        </tr>'; 
                   
                     endforeach;
                 
@@ -195,11 +199,13 @@ class My_orders extends MY_Controller{
                 }
                 
             }
-           
+
             echo $page;
            
         } else {
+
             echo 999;
         }
     }
+        
 }

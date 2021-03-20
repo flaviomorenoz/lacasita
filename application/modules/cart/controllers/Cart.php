@@ -14,12 +14,12 @@ class Cart extends MY_Controller{
         }
         
         if (!$this->ion_auth->logged_in()) {
-            
             if ($this->input->post('submit_type')=='save_order') {
+                
                 $current_time = strtotime(date('H:i:s'));
                 $from_time = strtotime($this->config->item('site_settings')->from_time);
                 $to_time = strtotime($this->config->item('site_settings')->to_time);
-                
+                 //die("Zozobra en la poblacion save_order");        
                 if ($current_time >= $from_time && $current_time <= $to_time) {
                     $this->save_order2();
                 } else {
@@ -35,12 +35,12 @@ class Cart extends MY_Controller{
         }else{
             check_access('user');
             if ($this->input->post('submit_type')=='save_order') {
+                
                 $current_time = strtotime(date('H:i:s'));
                 $from_time = strtotime($this->config->item('site_settings')->from_time);
                 $to_time = strtotime($this->config->item('site_settings')->to_time);
                 
                 if ($current_time >= $from_time && $current_time <= $to_time) {
-                   
                     $this->save_order();
                 } else {
                     
@@ -307,20 +307,18 @@ class Cart extends MY_Controller{
         
         $user_addr_det = $this->cart_model->get_user_shipping_address($user_id, $zipcode);
         
-        
-        
         if (!empty($user_addr_det)) {
 
             $user_addr_det = $user_addr_det[0];
 
-            $input_data['delivery_fee']       = $user_addr_det->delivery_fee;
-            $input_data['house_no']         = $user_addr_det->house_no;
-            $input_data['street']              = $user_addr_det->street;
-            $input_data['landmark']         = $user_addr_det->landmark;
+            $input_data['delivery_fee']         = $user_addr_det->delivery_fee;
+            $input_data['house_no']             = $user_addr_det->house_no;
+            $input_data['street']               = $user_addr_det->street;
+            $input_data['landmark']             = $user_addr_det->landmark;
             $input_data['locality']             = $user_addr_det->locality;
-            $input_data['city']             = $user_addr_det->city;
-            $input_data['city_id']            = $user_addr_det->city_id;
-            $input_data['pincode']          = $user_addr_det->pincode;
+            $input_data['city']                 = $user_addr_det->city;
+            $input_data['city_id']              = $user_addr_det->city_id;
+            $input_data['pincode']              = $user_addr_det->pincode;
         }
         
         
@@ -391,6 +389,7 @@ class Cart extends MY_Controller{
         
         if ($input_data['payment_type'] == 'cash' || $input_data['payment_type'] == 'cashCard') {
             $this->order_success();
+
         } else if ($input_data['payment_type'] == 'online') {
             //Paypal Payment
             $config['return']                 = base_url().'cart/order_success';
@@ -434,8 +433,8 @@ class Cart extends MY_Controller{
     {
         $success = 0;
         
-        
         if ($this->session->userdata('order_data') && $this->session->userdata('is_valid_request')) {
+
             $input_data = $this->session->userdata('order_data');
 
             if ($input_data['payment_type'] == 'cash' || $input_data['payment_type'] == 'cashCard') {
@@ -465,14 +464,17 @@ class Cart extends MY_Controller{
 
             
             if ($success == 1) {
+
                 $order_id = $this->base_model->insert_operation_id($input_data, TBL_ORDERS);
                 
                 if ($order_id > 0) {
                     
                     // If Points Redeemed, log the data & update user points - Start 
                     //check for redeem points
+
                     if ($input_data['is_points_redeemed']=='Yes' && $input_data['no_of_points_redeemed'] > 0) {
                         //redeem points
+                        
                         $user=getUserRec($input_data['user_id']);
                         
                         $data = array();
@@ -482,21 +484,21 @@ class Cart extends MY_Controller{
                             //point logs
                             unset($data);
                             $data = array();
-                            $data['user_id']     = $user->id;
-                            $data['points']      = $input_data['no_of_points_redeemed'];
-                            $data['transaction_type'] = 'Redeem';
+                            $data['user_id']            = $user->id;
+                            $data['points']             = $input_data['no_of_points_redeemed'];
+                            $data['transaction_type']   = 'Redeem';
                             $data['order_id']           = $order->order_id;
-                            $data['description']       = get_languageword('points_redeemed_for_buy_an_item_order');
-                            $data['created_on']          = date('Y-m-d H:i:s');
+                            $data['description']        = get_languageword('points_redeemed_for_buy_an_item_order');
+                            $data['created_on']         = date('Y-m-d H:i:s');
                             
                             $this->base_model->insert_operation($data, TBL_USER_POINTS);
                             unset($data);
                         }
                             
+                    }else{
                     }
+
                     //If Points Redeemed, log the data & update user points - End
-                    
-                    
 
                     $products_data     = array();
                     $addons_data    = array();
@@ -506,7 +508,6 @@ class Cart extends MY_Controller{
                     if ($this->cart->contents()) {
                         
                         foreach ($this->cart->contents() as $items) {
-                            
                             $common_id = random_string('numeric', 2);
                             //Prepare Products Data, If it is not an offer item
                             if ($items['options']['is_offer'] == 0) {
@@ -518,14 +519,11 @@ class Cart extends MY_Controller{
                                 } else if (!empty($items['options']['item_cost'])) {
                                     $final_cost = (($items['options']['item_cost'])*$items['qty']);//items_cost
                                 }
-                            
                                 
                                 if (!empty($items['options']['addons_cost_per_item'])) {
                                     $final_cost += $items['options']['addons_cost_per_item'];//items_cost+addons_cost
                                 }
                                 //End 
-                            
-                            
 
                                 array_push(
                                     $products_data, 
@@ -631,7 +629,6 @@ class Cart extends MY_Controller{
                         }
                         
                         
-                        
                         if (!empty($products_data)) {
                             $this->db->insert_batch(TBL_PREFIX.TBL_ORDER_PRODUCTS, $products_data);
                         }
@@ -710,8 +707,6 @@ class Cart extends MY_Controller{
                     
                         sendEmail($from, $to, $sub, $content);
                     }
-
-                    
                     
                     // SEND SMS IF ENABLE
                     if ($this->config->item('site_settings')->sms_notifications=='Yes' && $input_data['phone']!='') {

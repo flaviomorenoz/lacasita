@@ -1026,7 +1026,6 @@ class Ion_auth_model extends CI_Model
 		
 		//echo gettype($id) . "<br>";
 		//if(isset($id)){ echo "Esta seteado:" . $id; }else{ echo "No seteado";};
-		//die();
 
 		// add points to user for sign up
 		if($fb){

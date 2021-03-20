@@ -41,7 +41,7 @@
 	  <!--ITEM TYPES-->
 	  
 	  <!--OFFERS-->
-	  <li>
+     <li>
          <a <?php if(isset($activemenu) && $activemenu==ACTIVE_OFFERS) echo 'class="active-menu"';?> href="<?php echo URL_OFFERS_INDEX;?>"><i class="fa fa-bolt fa-3x"></i> <?php echo get_languageword('offers');?> </a>
       </li>
 	  <!--OFFERS-->
@@ -70,8 +70,11 @@
 	  <li >
          <a <?php if(isset($activemenu) && $activemenu==ACTIVE_ORDERS) echo 'class="active-menu"';?> href="#"><i class="fa fa-list fa-3x"></i> <?php echo get_languageword('orders');?> </a>
          <ul class="sidebar-submenu">
+            
+            <!-- NUEVOS PEDIDOS: -->
             <li><a <?php if (isset($actv_submenu) && $actv_submenu=='new') echo 'class="active-menu"';?> href="<?php echo URL_ORDERS_INDEX.'new';?>"> <?php echo get_languageword('new_orders');?> </a></li>
 			
+            <!-- PEDIDOS EN PROCESO -->
             <li><a <?php if (isset($actv_submenu) && $actv_submenu=='process') echo 'class="active-menu"';?> href="<?php echo URL_ORDERS_INDEX.'process';?>"> <?php echo get_languageword('under_process_orders');?> </a></li>
 			
 			<li><a <?php if (isset($actv_submenu) && $actv_submenu=='out_to_deliver') echo 'class="active-menu"';?> href="<?php echo URL_ORDERS_INDEX.'out_to_deliver';?>"> <?php echo get_languageword('out_to_deliver_orders');?> </a></li>

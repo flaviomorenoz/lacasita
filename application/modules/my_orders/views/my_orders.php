@@ -42,7 +42,7 @@
 				        <h4 class="panel-title">
 				          <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $i;?>">
 				          	<div class="order-history">
-				          		<h4> <span>(<?php echo get_languageword('order');?> # : <?php echo $order->order_id;?>)</span> <span class="oh-price">
+				          		<h4><span>(<?php echo get_languageword('order');?> # : <?php echo $order->order_id;?>)</span> <span class="oh-price">
 				          			<?php echo $currency_symbol.$order->total_cost;?></span></h4>
 				          		<?php 
 				          		$order_status = '';
@@ -57,13 +57,13 @@
 				          		}elseif ($order->status == "out_to_deliver") {
 				          			$order_status = 'En Camino';
 				          		}
-
 				          		?>
 				          		<p class="text-danger"> <?php echo ucwords(str_replace('_',' ',$order_status));?> </p>
 				          	</div>
 				          </a>
 				        </h4>
 				      </div>
+				      
 				      <div id="collapse<?php echo $i;?>" class="panel-collapse collapse">
 				        <div class="panel-body">
 				        	<div class="row">
@@ -139,14 +139,16 @@
 										</ul>	
 										
 										<br>
-								
+										
 				        				<h4><?php echo get_languageword('delivery_details');?></h4>
 				        				<p>
+										
 										<?php if(isset($order->house_no)) echo $order->house_no;?>
 										<?php if(isset($order->street)) echo $order->street;?>
 										<?php if(isset($order->landmark)) echo $order->landmark;?>
 										<?php if(isset($order->locality)) echo $order->locality;?>
 										<?php if(isset($order->city)) echo $order->city.' '.$order->pincode;?>
+										
 										</p>
 				        			</div>
 				        		</div>

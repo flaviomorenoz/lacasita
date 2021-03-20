@@ -522,7 +522,7 @@ $('#book_order').click(function() {
 		return false;
 	}
 	
-	//Validacion de detalles de la entrega
+	// Validacion de detalles de la entrega
 	var ciudad = $("#city_id").val().trim();
     var localidad = $("#locality").val().trim();
     var direccion =$("#street").val().trim();
@@ -534,7 +534,7 @@ $('#book_order').click(function() {
 		return false;
 	}
 	
-	//Validacion de medio de pago
+	// Validacion de medio de pago
 	var pymnt_option = $("input[name='payment_type']").is(":checked");
 	if(pymnt_option==false)
 	{
@@ -544,7 +544,7 @@ $('#book_order').click(function() {
 });
 
 
-//cards
+// Cards
 function show_cards()
 {
 	var payment_type = $("input[name='payment_type']:checked").val();

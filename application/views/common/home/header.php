@@ -49,6 +49,7 @@
                         <li class="menu-item"><a href="<?php echo URL_MENU;?>"><?php echo get_languageword('menu');?></a></li>
                         <li class="menu-item"><a href="<?php echo URL_ABOUT_US;?>"><?php echo get_languageword('about_us');?></a></li>
                         <li class="menu-item"><a href="<?php echo URL_CONTACT_US;?>"><?php echo get_languageword('contact_us');?></a></li>
+                        <li class="menu-item"><a href="<?php echo "https://lacasitadelassalchipapas.com.pe/webmail";?>" target="_blank"><?php echo "INTRANET";?></a></li>
                      </ul>
                   </div>
                   <div class="handheld-navigation">
@@ -57,6 +58,7 @@
                         	<li class="menu-item"><a href="<?php echo URL_MENU;?>"><?php echo get_languageword('menu');?></a></li>
                         	<li class="menu-item"><a href="<?php echo URL_ABOUT_US;?>"><?php echo get_languageword('about_us');?></a></li>
                         	<li class="menu-item"><a href="<?php echo URL_CONTACT_US;?>"><?php echo get_languageword('contact_us');?></a></li>
+	                        <li class="menu-item"><a href="<?php echo "https://lacasitadelassalchipapas.com.pe/webmail";?>" target="_blank"><?php echo "INTRANET";?></a></li>
 		                </ul>
                   </div>
                </nav>

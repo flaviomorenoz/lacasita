@@ -1,11 +1,17 @@
 <?php 
 
 $user_addresses = $this->cart_model->get_user_address();
+//var_dump($user_addresses);
+//die();
+
+$cSql = "select a.* from cr_stores a where a.active = '1'";
+$result_stores = $this->db->query($cSql)->result();
 
 ?>
 
 <!--Check Out Page Section-->
 <div class="container pt-8 pb-8">
+
 	<div class="row">
 	
 	<?php echo $this->session->flashdata('message'); ?>
@@ -23,21 +29,49 @@ $user_addresses = $this->cart_model->get_user_address();
       					<?php echo get_languageword('add_new_address');?>
       				</button>
       			</div>
+      			
       			<div class="cs-card-content card-items-list address-y-flow clearfix">
       				
       				<!-- Radio Checkbox -->
-      				<div class="address-box-header"><?php echo get_languageword('select_delivery_address');?></div>
-					
-					
+      				<div class="address-box-header">
+      					<!--<?php echo get_languageword('select_delivery_address');?>-->
+      					<b>Nuestros Locales para Recojo:</b>
+      				</div>
 					
       				<div class="row">
 					
+			            <?php 
+			            $k=0;
+			            foreach($result_stores as $r){  
+			            	$k++; ?>
+
+			            <div class="col-lg-4 col-md-4 col-sm-6">
+			                <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:red;" onclick="check_address('<?php echo $r->id;?>');">
+			                	<div class="address">
+			                		<p style="color:red;font-weight: bold;"><?= $r->alias ?></p>
+			                		<p><?= $r->street . " " . $r->house_no ?></p>
+			                		<p><?php $r->locality . " - " . $r->city ?></p>
+			                        <input id="address<?php echo $k;?>" class="pb-radio-custom pb-radio-address" name="zipcode" type="radio" value="<?php echo $r->id;?>" <?php echo $checked;?>>
+			                        <label for="address<?php echo $k;?>" class="pb-radio-custom-label pb-radio-address-label"> <?php echo get_languageword('deliver_to_this_address');?> </label>
+			                	</div>
+			                </div>
+			            </div>
 					
 					<?php 
+						}
+					?>
+					</div>
 
+					<div class="address-box-header">
+      					<b>Para Delivery:</b>
+      				</div>
+
+					<div class="row">
+
+					<?php
 					if(!empty($user_addresses)) {
 						
-						$k=0;
+						//$k=0;
 						foreach ($user_addresses as $address):
 						$k++;
 						
@@ -49,20 +83,23 @@ $user_addresses = $this->cart_model->get_user_address();
 						?>
 	
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="pb-delivery-address" onclick="check_address('<?php echo $address->ua_id;?>');">
-                            <div class="address">
-                               
-                            <p> <?php if (isset($address->street)) echo $address->street;?> <?php if (isset($address->house_no)) echo $address->house_no;?> </p>
+                        <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:green;" onclick="check_address('<?php echo $address->ua_id;?>');">
+                           	<div class="address">
+                            <p> 
+                            	<?php if (isset($address->street)) echo $address->street;?> 
+                            	<?php if (isset($address->house_no)) echo $address->house_no;?>
+                            </p>
 							
-                            <p> <?php if (isset($address->landmark)) echo $address->landmark;?> </p>
-							
+                            <p> <?php 
+                     				echo $address->landmark; 
+                            	?>
+							</p>
                             <p> <?php if (isset($address->locality)) echo $address->locality;?> </p>
 							
-							<p> <?php if (isset($address->city)) echo $address->city;?>  - <?php if (isset($address->pincode)) echo $address->pincode;?></p>
-							 
+							<p> <?php if (isset($address->city)) echo $address->city;?>  - 
+								<?php if (isset($address->pincode)) echo $address->pincode;?></p>
 							 
                             </div>
-							
 							
                             <input id="address<?php echo $k;?>" class="pb-radio-custom pb-radio-address" name="zipcode" type="radio" value="<?php echo $address->ua_id;?>" <?php echo $checked;?>>
 							
@@ -71,6 +108,12 @@ $user_addresses = $this->cart_model->get_user_address();
 							
                         </div>
                     </div>
+
+
+<!--if($address->street == "Villarán" && $address->house_no == "964")-->
+
+
+							
 					
 					<?php endforeach; } ?>
 					

@@ -289,7 +289,7 @@ class Kitchen_manager extends MY_Controller
             
             $query     = "SELECT tds.* from ".TBL_PREFIX.TBL_ORDERS." tds WHERE tds.km_id = '".$user_id."' ";
             
-            
+            //die($query);
             $records = $this->base_model->get_datatables($query, 'customnew', $conditions, $columns, array('order_id'=>'desc'));
             
             $currency_symbol = $this->config->item('site_settings')->currency_symbol;
