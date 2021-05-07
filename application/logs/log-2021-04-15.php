@@ -1,0 +1,30 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-04-15 08:46:27 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:47:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:49:23 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:54:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:55:09 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:55:11 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:55:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:55:55 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:57:20 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:58:41 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 08:59:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 09:00:05 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\entradas.php 41
+ERROR - 2021-04-15 16:14:25 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:14:34 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:14:50 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:15:23 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:15:34 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:16:26 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 16:16:39 --> Severity: error --> Exception: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 140
+ERROR - 2021-04-15 10:18:57 --> Severity: error --> Exception: syntax error, unexpected 'border' (T_STRING), expecting ';' or ',' C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\index.php 32
+ERROR - 2021-04-15 10:19:00 --> Severity: error --> Exception: syntax error, unexpected 'border' (T_STRING), expecting ';' or ',' C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\index.php 32
+ERROR - 2021-04-15 10:58:20 --> Severity: 8192 --> Array and string offset access syntax with curly braces is deprecated C:\xampp\htdocs\varios\qsystem\lacasita\application\libraries\google-api-php-client\service\Google_Utils.php 58
+ERROR - 2021-04-15 11:29:02 --> Severity: error --> Exception: Call to a member function agregar() on null C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 142
+ERROR - 2021-04-15 11:29:59 --> Severity: error --> Exception: Call to a member function agregar() on null C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 142
+ERROR - 2021-04-15 11:30:20 --> Severity: error --> Exception: Call to a member function agregar() on null C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 142
+ERROR - 2021-04-15 11:31:03 --> Severity: error --> Exception: Call to a member function agregar() on null C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\controllers\inventario.php 142
+ERROR - 2021-04-15 16:38:58 --> Severity: 8192 --> Array and string offset access syntax with curly braces is deprecated C:\xampp\htdocs\varios\qsystem\lacasita\application\libraries\google-api-php-client\service\Google_Utils.php 58
+ERROR - 2021-04-15 16:42:07 --> Severity: 8192 --> Array and string offset access syntax with curly braces is deprecated C:\xampp\htdocs\varios\qsystem\lacasita\application\libraries\google-api-php-client\service\Google_Utils.php 58

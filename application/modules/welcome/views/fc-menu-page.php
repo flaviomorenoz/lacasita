@@ -29,7 +29,7 @@
 			                    <a href="javascript:void(0);" class="category" onclick="get_menu_items_block('<?php echo $menu->menu_id;?>','<?php echo $menu->menu_name;?>')" id="<?php echo $menu->menu_id;?>"><?php echo $menu->menu_name;?></a>
 			                </li>
 			                <?php } } ?>   
-			                <li class="menu-item">
+			                <!--<li class="menu-item">
 			                    <a href="javascript:void(0);" class="category" onclick="get_offers_block()" id="offers">
 									<?php echo get_languageword('offers');?>		
 								</a>
@@ -38,7 +38,7 @@
 								<a href="javascript:void(0);" class="category" onclick="get_popular_items_block()" id="popular_items">
 									<?php echo get_languageword('popular_items');?>
 								</a>
-			                </li>
+			                </li>-->
 			        	</ul>
 			     	</div>
 			   	</div>

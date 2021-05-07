@@ -1,0 +1,9 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2021-04-23 11:20:12 --> Severity: error --> Exception: syntax error, unexpected 'height' (T_STRING), expecting ';' or ',' C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\stock.php 37
+ERROR - 2021-04-23 11:20:14 --> Severity: error --> Exception: syntax error, unexpected 'height' (T_STRING), expecting ';' or ',' C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\views\stock.php 37
+ERROR - 2021-04-23 14:41:57 --> Severity: error --> Exception: syntax error, unexpected '"', expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\models\Inventario_model.php 45
+ERROR - 2021-04-23 14:42:31 --> Severity: error --> Exception: syntax error, unexpected '"', expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\models\Inventario_model.php 45
+ERROR - 2021-04-23 14:42:54 --> Severity: error --> Exception: syntax error, unexpected '"', expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\models\Inventario_model.php 45
+ERROR - 2021-04-23 14:42:56 --> Severity: error --> Exception: syntax error, unexpected '"', expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) C:\xampp\htdocs\varios\qsystem\lacasita\application\modules\inventario\models\Inventario_model.php 45
+ERROR - 2021-04-23 19:30:30 --> Severity: 8192 --> Array and string offset access syntax with curly braces is deprecated C:\xampp\htdocs\varios\qsystem\lacasita\application\libraries\google-api-php-client\service\Google_Utils.php 58

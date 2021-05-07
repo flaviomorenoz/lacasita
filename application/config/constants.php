@@ -796,3 +796,6 @@ define('THUMB_IMG_HEIGHT',200);
 
 
 define('VERSION','1.0');
+
+define('IGV',0.18); // impuesto general a las ventas
+define('SIMBOLO_MONEDA',"S/"); // moneda

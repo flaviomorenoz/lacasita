@@ -8,176 +8,165 @@ $count = count($order_products)+count($order_offers);
 		<div class="row">
 			<div class="col-md-6">
 				<ul class="table-list ul">
-					   
-							<li><span><?php echo get_languageword('order_no');?>:</span>
-								<?php if(isset($order->order_id)) echo $order->order_id;?>
-							</li>
-							
-							
-							<li><span><?php echo get_languageword('order_date');?>:</span>
-								<?php if(isset($order->order_date) && $order->order_date != '') echo get_date($order->order_date);?>
-							</li>
-							
-							
-							<li><span><?php echo get_languageword('order_time');?>:</span> 
-							<?php if(isset($order->order_time) && $order->order_time != '') 
-								if (str_replace('PM', '', $order->order_time)) {
-								echo date("h:i A", strtotime( str_replace('PM', '', $order->order_time)));
-								}else {
-								echo date("h:i A", strtotime( str_replace('AM', '', $order->order_time)));
-								}
-							?></li>
-							
-							
-							<li><span><?php echo get_languageword('delivery_cost');?>:</span>
-								<?php if(isset($order->delivery_fee)) echo $currency.$order->delivery_fee;?>
-							</li>
-							
-							
-							<li><span><?php echo get_languageword('order_cost');?>:</span>
-								<?php if(isset($order->total_cost)) echo $currency.($order->total_cost - $order->delivery_fee);?>
-							</li>
-							
-							<li><span>Costo de Total:</span><?php if(isset($order->total_cost)) echo $currency.($order->total_cost);?></li>
+					<li><span><?php echo get_languageword('order_no');?>:</span>
+						<?php if(isset($order->order_id)) echo $order->order_id;?>
+					</li>
+					
+					
+					<li><span><?php echo get_languageword('order_date');?>:</span>
+						<?php if(isset($order->order_date) && $order->order_date != '') echo get_date($order->order_date);?>
+					</li>
+					
+					
+					<li><span><?php echo get_languageword('order_time');?>:</span> 
+					<?php if(isset($order->order_time) && $order->order_time != '') 
+						if (str_replace('PM', '', $order->order_time)) {
+						echo date("h:i A", strtotime( str_replace('PM', '', $order->order_time)));
+						}else {
+						echo date("h:i A", strtotime( str_replace('AM', '', $order->order_time)));
+						}
+					?></li>
+					
+					
+					<li><span><?php echo get_languageword('delivery_cost');?>:</span>
+						<?php if(isset($order->delivery_fee)) echo $currency.$order->delivery_fee;?>
+					</li>
+					
+					
+					<li><span><?php echo get_languageword('order_cost');?>:</span>
+						<?php if(isset($order->total_cost)) echo $currency.($order->total_cost - $order->delivery_fee);?>
+					</li>
+					
+					<li><span>Costo de Total:</span><?php if(isset($order->total_cost)) echo $currency.($order->total_cost);?></li>
 
-							<?php if ( $order->payable_amount > 0) {?>
-								<li><span>Monto Enviado:</span><?php echo $currency.($order->payable_amount); ?></li>
-								<li><span>Vuelto:</span><?php echo $currency.($order->payable_amount - $order->total_cost); ?></li>
-							<?php } ?>
-							
+					<?php if ( $order->payable_amount > 0) {?>
+						<li><span>Monto Enviado:</span><?php echo $currency.($order->payable_amount); ?></li>
+						<li><span>Vuelto:</span><?php echo $currency.($order->payable_amount - $order->total_cost); ?></li>
+					<?php } ?>
+					
 
-							<li><span><?php echo get_languageword('paid_amount');?>:</span><?php if(isset($order->paid_amount)) echo $currency.$order->paid_amount;?></li>
+					<li><span><?php echo get_languageword('paid_amount');?>:</span><?php if(isset($order->paid_amount)) echo $currency.$order->paid_amount;?></li>
 							
+					<!-- <li><span><?php //echo get_languageword('is_points_redeemed');?>:</span><?php //if(isset($order->is_points_redeemed)) echo $order->is_points_redeemed;?></li> -->
 							
-							
-							
-							
-							<!-- <li><span><?php //echo get_languageword('is_points_redeemed');?>:</span><?php //if(isset($order->is_points_redeemed)) echo $order->is_points_redeemed;?></li> -->
-							
+					<?php if($order->is_points_redeemed=='Yes') {?>
+					
+					<li><span><?php echo get_languageword('no_of_points_redeemed');?>:</span>
+						<?php if(isset($order->no_of_points_redeemed)) echo $order->no_of_points_redeemed;?>
+					</li>
+					
+					
+					<li><span><?php echo get_languageword('points_value');?>:</span>
+						<?php if(isset($order->points_value)) echo $currency.$order->points_value;?>
+					</li>
+					
+					<?php }?>
+		 				
+						
+					<li><span><?php echo get_languageword('booked_date');?>:</span>
+						<?php if(isset($order->date_created)) echo date("d/m/Y h:i A", strtotime($order->date_created)) ;?>
+					</li>
+						
+						
+						
+					<li><span><?php echo get_languageword('status');?>:</span>
+						<?php if(isset($order->status)) 
 
-						<?php if($order->is_points_redeemed=='Yes') {?>
-						
-						<li><span><?php echo get_languageword('no_of_points_redeemed');?>:</span>
-							<?php if(isset($order->no_of_points_redeemed)) echo $order->no_of_points_redeemed;?>
-						</li>
-						
-						
-						<li><span><?php echo get_languageword('points_value');?>:</span>
-							<?php if(isset($order->points_value)) echo $currency.$order->points_value;?>
-						</li>
-						
-						<?php }?>
-			 				
-							
-						<li><span><?php echo get_languageword('booked_date');?>:</span>
-							<?php if(isset($order->date_created)) echo date("d/m/Y h:i A", strtotime($order->date_created)) ;?>
-						</li>
-							
-							
-							
-						<li><span><?php echo get_languageword('status');?>:</span>
-							<?php if(isset($order->status)) 
-
-								$order_status = '';
-				          		if ($order->status=="delivered"){
-				          			$order_status = 'Entregado';
-				          		}elseif ($order->status == "process") {
-				          			$order_status = 'En Proceso';
-				          		}elseif ($order->status == 'cancelled') {
-				          			$order_status = 'Cancelado';
-				          		}elseif ($order->status == "new") {
-				          			$order_status = 'Nuevo';
-				          		}elseif ($order->status == "out_to_deliver") {
-				          			$order_status = 'En Camino';
-				          		} 
-				          		echo $order_status;
-							?></li>
+							$order_status = '';
+			          		if ($order->status=="delivered"){
+			          			$order_status = 'Entregado';
+			          		}elseif ($order->status == "process") {
+			          			$order_status = 'En Proceso';
+			          		}elseif ($order->status == 'cancelled') {
+			          			$order_status = 'Cancelado';
+			          		}elseif ($order->status == "new") {
+			          			$order_status = 'Nuevo';
+			          		}elseif ($order->status == "out_to_deliver") {
+			          			$order_status = 'En Camino';
+			          		} 
+			          		echo $order_status;
+						?>
+					</li>
 						
 						
 						
-						 </ul>
-								 
-                           
-						
-                      </div>
+				</ul>
+			</div>
 					  
-					  
-							
-							
-						<div class="col-md-6">
-						
-						<ul class="table-list ul">
-						 
-						<li><span><?php echo get_languageword('customer_name');?>:</span>
-							<?php if(isset($order->customer_name)) echo $order->customer_name;?>
-						</li>
-						
-						
-						
-						<li><span><?php echo get_languageword('phone');?>:</span>
-							<?php if(isset($order->phone)) echo $order->phone;?>
-						</li>
+			<div class="col-md-6">
+				
+				<ul class="table-list ul">
+				 
+				<li><span><?php echo get_languageword('customer_name');?>:</span>
+					<?php if(isset($order->customer_name)) echo $order->customer_name;?>
+				</li>
+				
+				
+				
+				<li><span><?php echo get_languageword('phone');?>:</span>
+					<?php if(isset($order->phone)) echo $order->phone;?>
+				</li>
 
+				
+				
+				<li><span><?php echo get_languageword('house_number');?>:</span>
+					<?php if(isset($order->house_no)) echo $order->house_no;?>
+				</li>
+				
+				
+				<li><span><?php echo get_languageword('street');?>:</span>
+					<?php if(isset($order->street)) echo $order->street;?>
+				</li>
+				
+				
+				
+				
+				<li><span><?php echo get_languageword('landmark');?>:</span>
+					<?php if(isset($order->landmark)) echo $order->landmark;?>
+				</li>
+				
+				
+				
+				<li><span><?php echo get_languageword('locality');?>:</span>
+					<?php if(isset($order->locality)) echo $order->locality;?>
+				</li>
+				
+				
+				<li><span><?php echo get_languageword('city');?>:</span> 
+					<?php if(isset($order->city)) echo $order->city;?>
+				</li>
+				
+				
+				<li><span><?php echo get_languageword('zipcode');?>:</span> 
+					<?php if(isset($order->pincode)) echo $order->pincode;?>
+				</li>
+				
+				
+				<?php if($order->is_admin_sent_to_km=='Yes') {?>
+				
+				<li><span><?php echo get_languageword('kitchen_manager');?>:</span> <?php if(isset($order->kitchen_manager)) echo $order->kitchen_manager;?></li>
+				
+				<?php } ?>
+				
+				
+				<?php if($order->dm_id > 0) {?>
+			   
+				<li><span><?php echo get_languageword('delivery_manager');?>:</span> <?php if(isset($order->delivery_manager)) echo $order->delivery_manager;?></li>	
+				
+				<?php } ?>
+				
+				
+				
+				 </ul>
+				</div> 	
+			</div>
 						
 						
-						<li><span><?php echo get_languageword('house_number');?>:</span>
-							<?php if(isset($order->house_no)) echo $order->house_no;?>
-						</li>
+			<!--ORDER ITEMS-->
+			<h3><?php echo get_languageword('order_items');?></h3>
 						
 						
-						<li><span><?php echo get_languageword('street');?>:</span>
-							<?php if(isset($order->street)) echo $order->street;?>
-						</li>
-						
-						
-						
-						
-						<li><span><?php echo get_languageword('landmark');?>:</span>
-							<?php if(isset($order->landmark)) echo $order->landmark;?>
-						</li>
-						
-						
-						
-						<li><span><?php echo get_languageword('locality');?>:</span>
-							<?php if(isset($order->locality)) echo $order->locality;?>
-						</li>
-						
-						
-						<li><span><?php echo get_languageword('city');?>:</span> 
-							<?php if(isset($order->city)) echo $order->city;?>
-						</li>
-						
-						
-						<li><span><?php echo get_languageword('zipcode');?>:</span> 
-							<?php if(isset($order->pincode)) echo $order->pincode;?>
-						</li>
-						
-						
-						<?php if($order->is_admin_sent_to_km=='Yes') {?>
-						
-						<li><span><?php echo get_languageword('kitchen_manager');?>:</span> <?php if(isset($order->kitchen_manager)) echo $order->kitchen_manager;?></li>
-						
-						<?php } ?>
-						
-						
-						<?php if($order->dm_id > 0) {?>
-					   
-						<li><span><?php echo get_languageword('delivery_manager');?>:</span> <?php if(isset($order->delivery_manager)) echo $order->delivery_manager;?></li>	
-						
-						<?php } ?>
-						
-						
-						
-						 </ul>
-						</div> 	
-					</div>
-						
-						
-						<!--ORDER ITEMS-->
-						<h3><?php echo get_languageword('order_items');?></h3>
-						
-						
-						<div class="table-responsive table1">
+				<div class="table-responsive table1">
 					<table cellspacing="10" width="100%" id="example" class="display responsive nowrap" border="1">
 					<thead>
 					<tr>

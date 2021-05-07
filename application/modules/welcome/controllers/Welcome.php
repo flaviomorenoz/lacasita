@@ -5,7 +5,6 @@ class Welcome extends MY_Controller{
     {
         
         parent::__construct();
-        
         if ($this->ion_auth->logged_in()) {
             if ($this->ion_auth->is_admin()) {
                 redirect(URL_ADMIN_INDEX);
@@ -15,7 +14,6 @@ class Welcome extends MY_Controller{
                 redirect(URL_DELIVERY_MANAGER);
             }
         }
-
     }
     
     
@@ -29,11 +27,12 @@ class Welcome extends MY_Controller{
     {
         //get latest 8 menus
         //get all active menus
-        
+       
         $m=0;
         $menus=array();
         $records = $this->base_model->get_query_result("select menu_id,menu_name from ".TBL_PREFIX.TBL_MENU." where status='Active' order by menu_id desc");
         
+        //die("select menu_id,menu_name from ".TBL_PREFIX.TBL_MENU." where status='Active' order by menu_id desc");
         if (!empty($records)) {
             foreach ($records as $record) {
                 
@@ -55,7 +54,7 @@ class Welcome extends MY_Controller{
         }
 
         $this->data['menus']        = $menus;
-        
+
         $this->data['home_page_caption']        = $this->config->item('site_settings')->home_page_caption;
         $this->data['home_page_tagline']        = $this->config->item('site_settings')->home_page_tagline;
         
@@ -345,7 +344,8 @@ class Welcome extends MY_Controller{
         
         //get all active menus
         $menus=array();
-        $records = $this->base_model->fetch_records_from(TBL_MENU, array('status'=>'Active'), '', 'menu_name');
+        //die(TBL_MENU);
+        $records = $this->base_model->fetch_records_from(TBL_MENU, array('status'=>'Active'), '', 'menu_id');
         
         if (!empty($records)) {
             foreach ($records as $record) {

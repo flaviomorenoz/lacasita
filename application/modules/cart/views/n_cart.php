@@ -24,10 +24,6 @@ $result_stores = $this->db->query($cSql)->result();
       			<div class="card-header bordered clearfix">
       				<span class="badge" style="background: transparent; border:1px solid #bdbaba; color: #666666">1</span> 
       				<?php echo get_languageword('delivery_details');?> 
-      				<button type="button" data-toggle="modal" data-target="#address-modal" class="btn btn-outline-primary pull-right">
-      					<i class="pe-7s-plus"></i> 
-      					<?php echo get_languageword('add_new_address');?>
-      				</button>
       			</div>
       			
       			<div class="cs-card-content card-items-list address-y-flow clearfix">
@@ -35,7 +31,7 @@ $result_stores = $this->db->query($cSql)->result();
       				<!-- Radio Checkbox -->
       				<div class="address-box-header">
       					<!--<?php echo get_languageword('select_delivery_address');?>-->
-      					<b>Nuestros Locales para Recojo:</b>
+      					<span style="font-weight: bold; font-size: 16px;">a) Recoger Pedidos en nuestros Locales:</span>
       				</div>
 					
       				<div class="row">
@@ -46,7 +42,7 @@ $result_stores = $this->db->query($cSql)->result();
 			            	$k++; ?>
 
 			            <div class="col-lg-4 col-md-4 col-sm-6">
-			                <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:red;" onclick="check_address('<?php echo $r->id;?>');">
+			                <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:rgb(255,130,130);border-radius:10px;border-width: 2px;" onclick="check_address('<?php echo $r->id;?>');">
 			                	<div class="address">
 			                		<p style="color:red;font-weight: bold;"><?= $r->alias ?></p>
 			                		<p><?= $r->street . " " . $r->house_no ?></p>
@@ -62,8 +58,16 @@ $result_stores = $this->db->query($cSql)->result();
 					?>
 					</div>
 
-					<div class="address-box-header">
-      					<b>Para Delivery:</b>
+					<div class="row">
+						<div class="address-box-header">
+	      					<span style="font-weight: bold; font-size: 16px;">b) &oacute; pide para Delivery:</span>
+
+		      				<button type="button" data-toggle="modal" data-target="#address-modal" class="btn btn-outline-primary pull-center">
+	      						<i class="pe-7s-plus"></i> 
+	      						<?php echo get_languageword('add_new_address');?>
+	      					</button>
+
+	      				</div>
       				</div>
 
 					<div class="row">
@@ -83,7 +87,7 @@ $result_stores = $this->db->query($cSql)->result();
 						?>
 	
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:green;" onclick="check_address('<?php echo $address->ua_id;?>');">
+                        <div class="pb-delivery-address" style="padding-top:1px;padding-bottom:1px;border-color:rgb(200,130,130);border-radius:10px;border-width: 2px;" onclick="check_address('<?php echo $address->ua_id;?>');">
                            	<div class="address">
                             <p> 
                             	<?php if (isset($address->street)) echo $address->street;?> 

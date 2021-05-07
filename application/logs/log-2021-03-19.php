@@ -16,3 +16,4 @@ ERROR - 2021-03-19 16:30:41 --> Severity: Warning --> count(): Parameter must be
 ERROR - 2021-03-19 16:31:01 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
 ERROR - 2021-03-19 16:46:30 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88
 ERROR - 2021-03-19 18:48:48 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\cart\views\n_cart.php 62
+ERROR - 2021-03-19 22:04:42 --> Severity: Warning --> count(): Parameter must be an array or an object that implements Countable D:\xampp\htdocs\varios\qsystem\lacasita\application\modules\welcome\models\Welcome_model.php 88

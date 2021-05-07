@@ -9,17 +9,20 @@ class Cart extends MY_Controller{
     }
     
     function index(){
+        
         if (empty($this->cart->contents())) {
             redirect(URL_MENU);
         }
         
         if (!$this->ion_auth->logged_in()) {
+            //die("pasare por aqui si logged_in?");
+
             if ($this->input->post('submit_type')=='save_order') {
-                
+                //die("friancheto");    
                 $current_time = strtotime(date('H:i:s'));
                 $from_time = strtotime($this->config->item('site_settings')->from_time);
                 $to_time = strtotime($this->config->item('site_settings')->to_time);
-                 //die("Zozobra en la poblacion save_order");        
+                
                 if ($current_time >= $from_time && $current_time <= $to_time) {
                     $this->save_order2();
                 } else {
@@ -30,9 +33,12 @@ class Cart extends MY_Controller{
             }
             $this->data['card_types'] = $this->base_model->fetch_records_from(TBL_CARD_IMAGES, array('status' => 'Active'));
             $this->data['content'] = 'n_cart2';
+            //die("apunto de pasar a n_cart2");
+            //die(getTemplate());
             $this->_render_page(getTemplate(), $this->data);
 
         }else{
+            //die("pasare por aqui no logged_in?");
             check_access('user');
             if ($this->input->post('submit_type')=='save_order') {
                 
@@ -273,6 +279,7 @@ class Cart extends MY_Controller{
     }
         
     function save_order(){
+        
         if (!$this->ion_auth->logged_in()) {
             $this->prepare_flashmessage("Por favor inicie sesión para continuar", 2);
             redirect(URL_AUTH_LOGIN);

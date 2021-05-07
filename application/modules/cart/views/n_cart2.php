@@ -485,7 +485,7 @@
 $( document ).ready(function() {
 	
 	<?php if (!empty($this->cart->contents())) {?>
-	load_cart_summary_div();
+		/*load_cart_summary_div();*/
 	<?php } ?>
 
 });

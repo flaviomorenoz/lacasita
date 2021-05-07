@@ -335,6 +335,7 @@
 	],
 	"file_history":
 	[
+		"/D/Varios/colleges/agregar_movimientos.php",
 		"/D/xampp/htdocs/varios/qsystem/lacasita/application/modules/welcome/views/home/index.php",
 		"/D/xampp/htdocs/varios/qsystem/lacasita/system/core/Model.php",
 		"/D/xampp/htdocs/varios/qsystem/lacasita/application/models/Base_model.php",
@@ -461,8 +462,7 @@
 		"/D/xampp/htdocs/codeigniter3/application/views/holaMundo/matematicas.php",
 		"/D/xampp/htdocs/codeigniter3/application/config/autoload.php",
 		"/D/xampp/htdocs/codeigniter3/application/controllers/holaMundo.php",
-		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/frontend.php",
-		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/default.php"
+		"/D/xampp/htdocs/codeigniter3/application/views/Layouts/frontend.php"
 	],
 	"find":
 	{

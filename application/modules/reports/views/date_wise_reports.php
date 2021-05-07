@@ -87,20 +87,31 @@
 				</div>
 				<div class="form-group col-md-2">
 					<label><?php echo get_languageword('customer');?></label>
-				<?php 
-				$val='';
-				if(isset($_POST['customer_name'])){
-					$val=$_POST['customer_name'];
-				}
-					echo form_dropdown('customer_name',$customers,$val,'class="form-control chzn-select"');
-				?>
+					<?php 
+						$val='';
+						if(isset($_POST['customer_name'])){
+							$val=$_POST['customer_name'];
+						}
+						echo form_dropdown('customer_name', $customers, $val, 'class="form-control chzn-select"');
+					?>
 				</div>
-
 				
-
+				<div class="form-group col-md-2">
+					<label><?php echo get_languageword('store');?></label>
+					<?php 
+						$val='';
+						if(isset($_POST['alias'])){
+							$val=$_POST['alias'];
+						}
+						echo form_dropdown('alias', $stores, $val, 'class="form-control chzn-select"');
+					?>
+				</div>
+				
 				<div class="form-group col-md-2">
 
-				<button type="submit" name="datewise_reports" value="datewise_reports" class="btn btn-primary btn-lg"><?php echo get_languageword('submit');?></button>
+					<button type="submit" name="datewise_reports" value="datewise_reports" class="btn btn-primary btn-lg">
+						<?php echo get_languageword('submit');?>
+					</button>
 
 				</div>
 
@@ -108,11 +119,11 @@
 
 				<div class="form-group col-md-3">
 
-				<div class="order-summary">
-				
-				<strong><?php echo 'Total costo de pedido: '.$this->config->item('site_settings')->currency_symbol.$total_pedido;?></strong>
-				
-				</div>
+					<div class="order-summary">
+					
+					<strong><?php echo 'Total costo de pedido: '.$this->config->item('site_settings')->currency_symbol.$total_pedido;?></strong>
+					
+					</div>
 
 				</div>
 
@@ -122,11 +133,11 @@
 
 				<div class="form-group col-md-3">
 
-				<div class="order-summary">
-				
-				<strong><?php echo 'Total costo de envío: '.$this->config->item('site_settings')->currency_symbol.$total_payable_amount;?></strong>
-				
-				</div>
+					<div class="order-summary">
+					
+						<strong><?php echo 'Total costo de envío: '.$this->config->item('site_settings')->currency_symbol.$total_payable_amount;?></strong>
+					
+					</div>
 
 				</div>
 
@@ -136,35 +147,34 @@
 
 				<div class="form-group col-md-3">
 
-				<div class="order-summary">
-				
-				<strong><?php echo 'Costo Total: '.$this->config->item('site_settings')->currency_symbol.$total_cost;?></strong>
-				
-				</div>
+					<div class="order-summary">
+					
+						<strong>
+							<?php echo 'Costo Total: '.$this->config->item('site_settings')->currency_symbol.$total_cost;?>
+						</strong>
+					
+					</div>
 
 				</div>
 
 				<?php } ?>
 
-
-
 				<?php echo form_close();?>
 
-				</div>
-
-				</div>
+			</div>
+			<div>
+				<?php
+					//echo "customer_name:" . $customer_name . "<br>"; 
+					//echo "alias:" . $alias . "<br>";
+					//echo $mi_query;
+				?>
+			</div>
+		</div>
 						<!---->
-						
-						
-						
 
-                            <div class="table-responsive">
+        <div class="table-responsive">
 
-							
-
-			
-
-			<table id="example" class="display responsive nowrap" width="100%" cellspacing="0">
+			<table id="example" class="display responsive nowrap" width="100%" cellspacing="0" style="font-size:12px;">
 
 			  	<thead>
 
@@ -182,7 +192,8 @@
 
 						<th><?php echo get_languageword('booked_date');?></th>
 						<th><?php echo get_languageword('payment');?></th>
-						<th><?php echo get_languageword('paid_amount');?></th>
+						<!--<th><?php echo get_languageword('paid_amount');?></th>-->
+						<th><?php echo get_languageword('service_location');?></th>
 						<th>Detalle</th>
 					</tr>
 
@@ -236,7 +247,10 @@
 				?>
 				<td><?php echo $paymen_cart_pay; ?></td>
 
-				<td><?php echo $r->paid_amount;?></td>
+				<!--<td><?php echo $r->paid_amount;?></td>-->
+
+				<td><?php echo $r->alias; ?></td>
+
 				<td>
 					<button onclick="showModal('<?php echo site_url('reports/view_order/details_reports/'.$r->order_id.'/'.$r->status); ?>');" class="btn btn-primary pull-right btn-icon icon-right" >
 						<i class="<?php echo CLASS_ICON_VIEW ?>" ></i>
@@ -257,21 +271,21 @@
 
 			</table>
 
-			</div>
+		</div>
 
-			</div>
+	</div>
 
-			</div>
+</div>
 
-		 </div>
+</div>
 
-                        </div>
+</div>
 
-                  
 
-                    <!--End Advanced Tables -->
 
-                </div>
+<!--End Advanced Tables -->
+
+</div>
 
 				
 
@@ -289,9 +303,7 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
-
-		
+    $(document).ready(function (){
 
         $('#report_form').bootstrapValidator({
 

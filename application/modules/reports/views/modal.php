@@ -1,6 +1,8 @@
 <script type="text/javascript">
 	function showModal(url){
+		
 		jQuery('#modal_ajax .modal-body').html('<div style="text-align:center;margin-top:200px;"><img src="<?php echo base_url() ?>assets/images/loader-1.gif" style="height:25px;" /></div>');
+		
 		jQuery('#modal_ajax').modal('show', {backdrop: 'true'});
 		
 		$.ajax({

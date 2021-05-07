@@ -83,3 +83,5 @@ $route['terms-conditions']	= 'welcome/terms_conditions';
 $route['privacy-policy']	= 'welcome/privacy_policy';
 $route['faqs']				= 'welcome/faqs';
 $route['download-app']		= 'welcome/download_app';
+//$route['inventarios'] 		= 'inventario';
+//$route['inventario']        = 'inventario/index';

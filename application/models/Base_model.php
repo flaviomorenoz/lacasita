@@ -776,6 +776,7 @@ class Base_Model extends CI_Model {
 		if($status != '')
 			$cond = array('status'=>$status);
 		
+		//die(TBL_MENU . " " . $cond);
 		$menus = $this->base_model->fetch_records_from(TBL_MENU, $cond);
 		if(!empty($menus))
 		{

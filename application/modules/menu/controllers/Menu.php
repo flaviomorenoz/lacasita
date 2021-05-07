@@ -64,6 +64,7 @@ class Menu extends MY_Controller
       **/ 
     function index()
     {
+
         if ($this->input->post()) {
             /***
             * 
@@ -153,11 +154,11 @@ class Menu extends MY_Controller
         'disablesorting' => '0,5',
         );
         
-        $this->data['css_js_files'] = array('data_tables');
-        $this->data['activemenu']     = "menu";
-        $this->data['message']         = $this->session->flashdata('message');
-        $this->data['pagetitle']     = get_languageword('view_menu');
-        $this->data['content']         = PAGE_MENU;
+        $this->data['css_js_files']     = array('data_tables');
+        $this->data['activemenu']       = "menu";
+        $this->data['message']          = $this->session->flashdata('message');
+        $this->data['pagetitle']        = get_languageword('view_menu');
+        $this->data['content']          = PAGE_MENU;
         $this->_render_page(TEMPLATE_ADMIN, $this->data);
     }
     /**

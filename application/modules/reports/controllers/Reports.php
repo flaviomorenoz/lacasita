@@ -30,7 +30,6 @@ class Reports extends MY_Controller
                 $active_submenu=$order_type;
                 $this->data['actv_submenu'] = $active_submenu;
         
-        
                 //order
                 
                 $order = $this->base_model->get_query_result("SELECT o.*,k.username as kitchen_manager,sk.username as sent_km_user,d.username as delivery_manager FROM ".TBL_PREFIX.TBL_ORDERS." o LEFT JOIN ".TBL_PREFIX.TBL_USERS." k ON o.km_id=k.id LEFT JOIN ".TBL_PREFIX.TBL_USERS." sk ON o.sent_km_id=sk.id LEFT JOIN ".TBL_PREFIX.TBL_USERS." d ON o.dm_id=d.id WHERE o.order_id=".$order_id." ");
@@ -110,10 +109,13 @@ class Reports extends MY_Controller
     {
         if (isset($_POST['datewise_reports'])) {
             
-            $from_date = $this->input->post('from_date');
-            $to_date = $this->input->post('to_date');
-            $order_status = $this->input->post('order_status');
-            $customer_name = $this->input->post('customer_name');
+            $from_date      = $this->input->post('from_date');
+            $to_date        = $this->input->post('to_date');
+            $order_status   = $this->input->post('order_status');
+            $customer_name  = $this->input->post('customer_name');
+            //$alias          = $this->input->post('alias'); 
+            $alias          = $_POST["alias"];
+
             
             if ($from_date != '' && $to_date != '') {
                 
@@ -124,7 +126,22 @@ class Reports extends MY_Controller
                     $this->prepare_flashmessage(get_languageword('please_select_valid_dates'), 1);
                     redirect(URL_REPORTS_INDEX);
                 }
-                $query="select o.order_id, o.customer_name,o.status,o.phone,o.no_of_items,o.total_cost,o.delivery_fee,o.order_date,o.order_time,o.payment_card,o.payment_gateway,o.paid_amount from ".TBL_PREFIX.TBL_ORDERS." o where o.customer_name like '%".$customer_name."%'  and o.status like '%".$order_status."%' and o.order_date between '".$from_date."' and '".$to_date."'";
+
+                $cadAlias = "";
+                if(isset($alias) && strlen($alias)>0){
+                    $cadAlias = " and c.alias = '" . $alias . "'";
+                }
+
+                $query="select o.order_id, o.customer_name,o.status,o.phone,o.no_of_items,o.total_cost,".
+                    "o.delivery_fee,o.order_date,o.order_time,o.payment_card,o.payment_gateway,o.paid_amount,c.alias".
+                    " from ".TBL_PREFIX.TBL_ORDERS." o".
+                    " left join cr_service_provide_locations cspl on o.pincode = cspl.pincode".
+                    " left join cr_stores c on cspl.id_store = c.id".
+                    " where o.customer_name like '%".$customer_name."%'  and o.status like '%".
+                    $order_status."%' and o.order_date between '".$from_date."' and '".$to_date."'".
+                    $cadAlias;
+                
+                $this->data['mi_query']     = $query; //die($query);
                 
                 $records = $this->db->query($query)->result();
                 
@@ -150,9 +167,9 @@ class Reports extends MY_Controller
         * 
         * get customers
         **/
-        $customers=array();
-        $query = "select u.id,CONCAT(u.first_name,' ',u.last_name) as customer_name from ".TBL_PREFIX.TBL_USERS." u inner join ".TBL_PREFIX.TBL_USERS_GROUPS." ug on u.id=ug.user_id where u.active=1 and ug.group_id=2 ";
-        $users = $this->db->query($query)->result();
+        $customers  = array('');
+        $query      = "select u.id,CONCAT(u.first_name,' ',u.last_name) as customer_name from ".TBL_PREFIX.TBL_USERS." u inner join ".TBL_PREFIX.TBL_USERS_GROUPS." ug on u.id=ug.user_id where u.active=1 and ug.group_id=2 ";
+        $users      = $this->db->query($query)->result();
         
         if (!empty($users)) {
             
@@ -164,15 +181,29 @@ class Reports extends MY_Controller
         } else {
             $customers = array(''=>get_languageword('no_customers_available'));
         }
+        
+        $stores         = array();
+        $cSql           = "select * from cr_stores";
+        $result_stores  = $this->db->query($cSql)->result();
+
+        if(!empty($result_stores)){
+            $stores = array(''=>Todos);
+            foreach($result_stores as $r):
+                $stores[$r->alias] = $r->alias;
+            endforeach;
+        }
+
         $this->data['customers']    = $customers;
+        $this->data['stores']       = $stores;
         $this->data['css_js_files'] = array('data_tables','datepicker','form_validation');
         
-        $this->data['activemenu']     = "reports";
-        $this->data['actv_submenu'] = 'date_wise';
+        $this->data['activemenu']       = "reports";
+        $this->data['actv_submenu']     = 'date_wise';
         
-        $this->data['message']         = $this->session->flashdata('message');
-        $this->data['pagetitle']     = get_languageword('date_wise_reports');
-        $this->data['content']         = PAGE_DATE_WISE_REPORTS;
+        $this->data['message']          = $this->session->flashdata('message');
+        $this->data['pagetitle']        = get_languageword('date_wise_reports');
+        $this->data['content']          = PAGE_DATE_WISE_REPORTS;
+        //die("content:".PAGE_DATE_WISE_REPORTS);
         $this->_render_page(TEMPLATE_ADMIN, $this->data);
     }
     
